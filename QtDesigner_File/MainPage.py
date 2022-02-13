@@ -53,9 +53,29 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.btExit.setFont(font)
+        self.btExit.setAutoFillBackground(True)
         self.btExit.setStyleSheet("background-color: rgb(85, 85, 127);")
         self.btExit.setObjectName("btExit")
         self.horizontalLayout.addWidget(self.btExit)
+        self.lbTitle = QtWidgets.QLabel(Form)
+        self.lbTitle.setGeometry(QtCore.QRect(10, 10, 551, 31))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.lbTitle.setFont(font)
+        self.lbTitle.setStyleSheet("background-color: rgb(85, 85, 127);")
+        self.lbTitle.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbTitle.setObjectName("lbTitle")
+        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2.setGeometry(QtCore.QRect(10, 320, 81, 61))
+        self.label_2.setAutoFillBackground(False)
+        self.label_2.setStyleSheet("")
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap(":/images/photo.jpg"))
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.lbCamera = QtWidgets.QLabel(Form)
+        self.lbCamera.setGeometry(QtCore.QRect(100, 50, 371, 331))
+        self.lbCamera.setObjectName("lbCamera")
 
         self.retranslateUi(Form)
         self.pushButton_2.pressed.connect(Form.test) # type: ignore
@@ -66,7 +86,9 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Photo Booth"))
         self.pushButton_2.setText(_translate("Form", "Take picture"))
         self.btExit.setText(_translate("Form", "Exit"))
+        self.lbTitle.setText(_translate("Form", "Photo Booth"))
+        self.lbCamera.setText(_translate("Form", "TextLabel"))
 

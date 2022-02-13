@@ -1,12 +1,12 @@
-from PyQt5.QtWidgets import * # QApplication, QWidget, Q
+from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5 import uic
 from QtDesigner_File.MainPage import Ui_Form
-#prova
 
 import os
-import gphoto2 as gp
+#import gphoto2 as gp
 import subprocess
 import sysconfig
+#import cv2
 
 
 class Ui(QWidget):
@@ -15,7 +15,9 @@ class Ui(QWidget):
         uic.loadUi('QtDesigner_File/MainPage.ui', self)
 
         self.setWindowTitle ("Python11")
-        self.UiComponents()
+        self.window.__init__()
+        
+
 
     def exit(self):
         print('Exit')
@@ -23,19 +25,10 @@ class Ui(QWidget):
 
     def test(self):
         print('Test')
-        camera = gp.Camera()
-        config_tree = camera.get_config()
-        print(config_tree)
+       # camera = gp.Camera()
+       # config_tree = camera.get_config()
+       # print(config_tree)
 
-    def UiComponents(self):
-        button = QPushButton("CLICK", self)
-        button.setGeometry(200,150,100,30)
-        button.clicked.connect(self.clickme)
-        button.setText("Over-write")
-
-    def clickme(self):
-        # printing pressed
-        print("pressed")
 
 app = QApplication([])
 
