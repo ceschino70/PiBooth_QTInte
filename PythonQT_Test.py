@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import * # QApplication, QWidget, Q
 from PyQt5 import uic
 from QtDesigner_File.MainPage import Ui_Form
+#prova
 
 import os
 import gphoto2 as gp
